@@ -5,8 +5,8 @@ import path from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
-  plugins: [react(),tailwindcss()],
-  base: './', // Configuração para GitHub Pages
+  plugins: [react( ),tailwindcss()],
+  base: '/explorer/', // <-- LINHA ALTERADA
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
@@ -24,4 +24,3 @@ export default defineConfig({
     allowedHosts: ['4173-ig0l35mn6zkrjhgi9246h-4c198e94.manusvm.computer', 'localhost', '127.0.0.1']
   }
 })
-
