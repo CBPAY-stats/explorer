@@ -162,7 +162,7 @@ const ExportData = ({ transactions, accountInfo, walletAddress }) => {
 
   const handleExport = async () => {
     if (!transactions || transactions.length === 0) {
-      alert('No transactions to export')
+      alert("No transactions to export")
       return
     }
 
@@ -176,7 +176,7 @@ const ExportData = ({ transactions, accountInfo, walletAddress }) => {
       }
     } catch (error) {
       console.error('Export error:', error)
-      alert('Error exporting data. Please try again.')
+      alert("Error exporting data. Please try again.")
     } finally {
       setIsExporting(false)
     }

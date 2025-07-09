@@ -37,18 +37,17 @@ const FavoriteAddresses = ({ currentAddress, onAddressSelect }) => {
 
   const addFavorite = () => {
     if (!isValidAddress(newFavorite.address)) {
-      alert('Please enter a valid XDB Chain address (56 characters, starting with "G")')
-      return
+     alert("Please enter a valid XDB Chain address (56 characters, starting with \"G\")")      return
     }
 
     if (!newFavorite.name.trim()) {
-      alert('Please enter a name for this address')
+      alert("Please enter a name for this address")
       return
     }
 
     // Check if address already exists
     if (favorites.some(fav => fav.address === newFavorite.address)) {
-      alert('This address is already in your favorites')
+      alert("This address is already in your favorites")
       return
     }
 
@@ -69,10 +68,9 @@ const FavoriteAddresses = ({ currentAddress, onAddressSelect }) => {
     if (!editingFavorite) return
 
     if (!editingFavorite.name.trim()) {
-      alert('Please enter a name for this address')
+      alert("Please enter a name for this address")
       return
     }
-
     setFavorites(prev => prev.map(fav => 
       fav.id === editingFavorite.id 
         ? { ...fav, name: editingFavorite.name.trim(), description: editingFavorite.description.trim() }
@@ -82,14 +80,14 @@ const FavoriteAddresses = ({ currentAddress, onAddressSelect }) => {
   }
 
   const removeFavorite = (id) => {
-    if (confirm('Are you sure you want to remove this favorite address?')) {
+    if (confirm("Are you sure you want to remove this favorite address?")) {
       setFavorites(prev => prev.filter(fav => fav.id !== id))
     }
   }
 
   const addCurrentAddress = () => {
     if (!currentAddress || !isValidAddress(currentAddress)) {
-      alert('No valid address currently loaded')
+      alert("No valid address currently loaded")
       return
     }
 
