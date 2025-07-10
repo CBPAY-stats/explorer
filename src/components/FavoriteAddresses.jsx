@@ -37,7 +37,7 @@ const FavoriteAddresses = ({ currentAddress, onAddressSelect }) => {
 
   const addFavorite = () => {
     if (!isValidAddress(newFavorite.address)) {
-     alert("Please enter a valid XDB Chain address (56 characters, starting with \"G\")")      return
+     alert("Please enter a valid XDB Chain address (56 characters, starting with \"G\")"); return
     }
 
     if (!newFavorite.name.trim()) {
@@ -314,4 +314,5 @@ const FavoriteAddresses = ({ currentAddress, onAddressSelect }) => {
 }
 
 export default FavoriteAddresses
+
 
