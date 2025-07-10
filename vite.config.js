@@ -6,7 +6,6 @@ import path from 'path'
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react( ), tailwindcss()],
-  root: ".", // Define a raiz do projeto para o build como o diretório atual
   base:
     process.env.NODE_ENV === 'production'
       ? '/explorer/'
@@ -14,14 +13,6 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
-    },
-  },
-  build: {
-    outDir: "dist", // Garante que a saída do build vai para a pasta 'dist'
-    rollupOptions: {
-      input: {
-        main: path.resolve(__dirname, 'index.html'), // Aponta para o index.html na raiz do projeto (que agora é public/)
-      },
     },
   },
   server: {
